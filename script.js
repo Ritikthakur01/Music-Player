@@ -80,27 +80,27 @@ const songs= [
         id: '16',
         song_Name: 'Meri Zindagi Hai Tu <br><div class="subtitle">Jubin Nautiyal</div>',
         poster: "images/16.jpg",
-    },
-    {
-        id: '17',
-        song_Name: 'Zaroori Tha <br><div class="subtitle">Rahat Fateh</div>',
-        poster: "images/17.jpg",
-    },
-    {
-        id: '18',
-        song_Name: 'Pasoori <br><div class="subtitle">Ali Sethi</div>',
-        poster: "images/18.jpg",
-    },
-    {
-        id: '19',
-        song_Name: 'Pagal <br><div class="subtitle">AP Dhillon</div>',
-        poster: "images/19.jpg",
-    },
-    {
-        id: '20',
-        song_Name: 'Vande Mataram <br><div class="subtitle">Lata</div>',
-        poster: "images/20.jpg",
-    },
+    }
+    // {
+    //     id: '17',
+    //     song_Name: 'Zaroori Tha <br><div class="subtitle">Rahat Fateh</div>',
+    //     poster: "images/17.jpg",
+    // },
+    // {
+    //     id: '18',
+    //     song_Name: 'Pasoori <br><div class="subtitle">Ali Sethi</div>',
+    //     poster: "images/18.jpg",
+    // },
+    // {
+    //     id: '19',
+    //     song_Name: 'Pagal <br><div class="subtitle">AP Dhillon</div>',
+    //     poster: "images/19.jpg",
+    // },
+    // {
+    //     id: '20',
+    //     song_Name: 'Vande Mataram <br><div class="subtitle">Lata</div>',
+    //     poster: "images/20.jpg",
+    // },
 
 ]
 
