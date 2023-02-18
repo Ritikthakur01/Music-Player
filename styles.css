@@ -673,8 +673,6 @@ main .song-box .popular-artist .popular-artist-heading h4{
         position: absolute;
         font-size: 13px;
         letter-spacing: 1.7px;
-        /* border: 1px solid red; */
-        margin-top: -14px;
     }
 main .song-box .popular-artist .popular-artist-heading .fa-sort-up{
         position: absolute;
@@ -709,7 +707,7 @@ main .song-box .popular-artist .popular-artist-main{
     display: flex;
     overflow:auto;
     /* border: 1px solid red; */
-    margin-top:15px;
+    
 }
 main .song-box .popular-artist .popular-artist-main::-webkit-scrollbar{
     display: none;
