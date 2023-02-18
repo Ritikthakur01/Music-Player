@@ -131,7 +131,7 @@ const makeAllplay = ()=>{
         el.classList.add('fa-circle-play');
         el.classList.remove('fa-circle-pause');
     })
-} 
+}  
 
 
 const makeAllBackground = ()=>{
@@ -169,7 +169,6 @@ Array.from(document.getElementsByClassName('playlist-play')).forEach((e)=>
         el.target.classList.add("fa-circle-pause");
 
         music.play();
-        
     })
 )
 
