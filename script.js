@@ -133,7 +133,6 @@ const makeAllplay = ()=>{
     })
 }  
 
-
 const makeAllBackground = ()=>{
     Array.from(document.getElementsByClassName('song-item')).forEach((el)=>{   
         el.style.background = 'rgba(105,105,105,.0)';
