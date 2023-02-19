@@ -20,8 +20,9 @@ body{
     background-color:  #121213;
     display: grid;
     place-items: center;
-
+    overflow: auto;
 }
+
 /*--------------main------------*/
 
 
@@ -37,10 +38,12 @@ main{
     overflow: hidden;
 }
 main .menu-box {
+    /* border: 1px solid red; */
     width:25%;
     height: 90%;
     background-color: var(--theme2-color);
     box-shadow: -6px -1px 3728px 10px  #090f1f inset;
+
 }
 main .song-box{
     width: 75%; 
@@ -52,17 +55,21 @@ main .music-controller{
     height:10%;
     background-color: var(--theme2-color);
     /* box-shadow: 0px 0px 7px 3px  #090f1f ; */
-
+    z-index: 99999999;
 }
 main .menu-box h1{
-    font-size: 20px;
+    font-size: 1.4rem;
     margin: 15px 0px 0px 20px;
 }
 main .menu-box .playlist{
+    max-width: 90%;
+    height: auto;
     margin: 40px 0px 0px 20px;
+
+
 }
 main .menu-box .playlist h4{
-    font-size: 14px;
+    font-size: .85rem;
     padding-bottom: 10px;
     font-weight: 400px;
     color:var(--playlist-font-color);
@@ -109,9 +116,10 @@ main .menu-box .playlist .active .fa-music{
 
 main .menu-box .menu-song{
     width: 100%;
-    height: 350px;
+    height: 63%;
     margin-top: 40px;
     overflow: auto;
+    /* border: 1px solid red; */
 }
 main .menu-box .menu-song::-webkit-scrollbar{
     display: none;
@@ -119,11 +127,13 @@ main .menu-box .menu-song::-webkit-scrollbar{
 main .menu-box .menu-song li{
     list-style-type: none;
     padding: 5px 0px 5px 20px;
+    width: 95%;
     display: flex;
     align-items: center;
     cursor: pointer;
     margin-bottom: 10px;
     transition: all .3s ease-out;
+    /* border: 1px  solid red; */
 }
 main .menu-box .menu-song li:hover{
     background-color:rgba(105,105,105,.1) ;
@@ -137,16 +147,17 @@ main .menu-box .menu-song li span{
 main .menu-box .menu-song li img{
     height:32px ;
     width:32px ;
-    margin-left: 025px;
+    margin-left:13%;
 }
 main .menu-box .menu-song li h5{
     font-size: 11px;
     color: lightgray;
     margin-left:15px ;
     width: 185px;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    overflow: auto;
+}
+main  .music-controller h5::-webkit-scrollbar{
+    display: none;
 }
 main .menu-box .menu-song li h5 .subtitle{
     color: var(--playlist-font-color);
@@ -156,7 +167,6 @@ main .menu-box .menu-song li .fa-solid{
     position:relative;
     left:-10px;
     /* border: 1px solid red; */
-    
 }
 
 
@@ -191,7 +201,6 @@ main  .music-controller .wave{
     height: 30px;
     /* border: 1px solid white; */
     padding:5px 0px;
-
     display: flex;
     align-items: flex-end;
 }
@@ -249,12 +258,19 @@ main  .music-controller h5 .subtitle{
     white-space:nowrap;
 }
 
+
 /* buttons */
 main  .music-controller .icon{
-    font-size:23px;
-    margin: 0px 15px 0px 10px;
+    position: relative;
+    font-size:1.3rem;
+    margin: 0px 3% 0px 0%;
     outline: none;
-
+   width: 185px;
+   /* border: 1px solid red; */
+   display: flex;
+   align-items:center;
+   flex-wrap: nowrap;
+   
 }
 main  .music-controller .icon i{
     cursor: pointer;
@@ -265,12 +281,12 @@ main  .music-controller .icon i{
 }
 main  .music-controller .icon #masterplay{
     width:16px;
-    margin: auto;
+    margin: 0px 10px;
     
 }
 main  .music-controller .icon .fa-shuffle{
     position: relative;
-    bottom: 1.5px;
+    bottom: -1px;
    font-size:16px;
    margin-left: 5px;
    width: 20px;
@@ -282,23 +298,27 @@ main .music-controller .icon .fa-cloud-arrow-down{
     font-size: 16px;
     margin-left: 10px;
     width: 20px;
-    bottom: 2px;
+    bottom: 0px;
 }
-main .music-controller span{
+main .music-controller .slider{
+    display: flex;
+    /* border: 1px solid red; */
+    position: relative;
+    left:-10px
+}
+
+main .music-controller #currentstart{
+    /* border: .5px solid red; */
     color:white;
     width:55px;
     font-size: 13px;
     font-weight:400px;
-    overflow:hidden;
-    text-overflow: ellipsis;
-    white-space:nowrap;
     border:none;
     /* border: .5px solid red; */
-}
-main .music-controller #currentstart{
+    padding-right: 2px;
     margin:0px 4px 0px 18px;
-    /* border: .5px solid red; */
-    
+    display: flex;
+    flex-wrap: nowrap;
 }
 main .music-controller .bar{
     position: relative;
@@ -306,6 +326,7 @@ main .music-controller .bar{
     height:1.8px;
     background-color: rgba(105, 105, 107, .1);
     margin: 0px 5px 0px 5px;
+    top:9px;
 }
 main .music-controller .bar .bar2{
     position: absolute;
@@ -350,20 +371,28 @@ main .music-controller #currentend{
     width:55px;
     font-size: 13px;
     font-weight:400px;
-    overflow:hidden;
-    text-overflow: ellipsis;
-    white-space:nowrap;
     border:none;
-    margin:0px 20px;
-
+    /* border: .5px solid red; */
+    margin:0px 4px 0px 18px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+main .music-controller .volume{
+    position: relative;
+    /* border: 1px solid red; */
+    left:25px;
+    height: auto;
+    width: auto;
+    top:0px;
+    margin-right:70px
 }
 
 main .music-controller .vol {
     position: relative;
-    width: 100px;
+    width: 90px;
     height:2px;
     left:30px;
-    background-color: rgba(105, 105, 107, .1); ;
+    background-color: rgba(105, 105, 107, .1); 
 }
 main .music-controller .vol #vol-icon {
     position: absolute;
@@ -374,19 +403,21 @@ main .music-controller .vol #vol-icon {
     top:-6px;
 }
 main .music-controller .vol .vol-bar {
-    position: absolute;
+    position: relative;
     height:100%;
     width:100%;
     background-color: var(--active-font-color);
+    top: -24px;
 }
 main .music-controller .vol .dot {
     position: relative;
     height:4.5px;
     width: 4.5px;
     border-radius: 50%;
-    top:-1.3px;
-    left:100%;
+    top: -27px;
+    left:98%;
     background-color: var(--active-font-color);
+
 }
 main .music-controller .vol .dot::before {
     content: '';
@@ -401,9 +432,9 @@ main .music-controller .vol .dot::before {
 
 }
 main .music-controller .vol input {
-    position: absolute;
+    position:relative;
     width:100%;
-    top:-7px;
+    top:-8px;
     left:-5px;
     cursor: pointer;
     z-index:10;
@@ -438,6 +469,7 @@ main .song-box nav ul{
     list-style-type: none;
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
 
 }
 main .song-box nav ul li{
@@ -447,6 +479,10 @@ main .song-box nav ul li{
     font-weight: 800px;
     cursor: pointer;
     transition: .5s ease-out;
+    /* border: .5px solid red; */
+    width:71px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 main .song-box nav ul li:hover{
     color:white;
@@ -509,6 +545,8 @@ main .song-box nav .user img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    display: flex;
+    flex-wrap: nowrap;
 } 
 
 main .song-box .content{
@@ -565,9 +603,10 @@ main .song-box .content .button button:nth-child(2):hover{
 main .song-box .popular-song{
     width: 90%;
     margin:auto;
-    height:auto;
+    height:200px;
     margin-top: 15px;
     overflow:auto;
+    /* border: 1px solid red; */
 }
 main .song-box .popular-song::-webkit-scrollbar{
     display: none;
@@ -610,10 +649,12 @@ main .song-box .popular-song .popular-song-main{
 main .song-box .popular-song .popular-song-main li{
     list-style-type: none;
     display: flex;
+    height: 95%;
     flex-direction: column;
     margin-right: 10px;
     transition: .3s linear;
-    padding-left:4.5px
+    padding-left:4.5px;
+    /* border: 1px solid red; */
 }
 main .song-box .popular-song .popular-song-main li:hover{
     transform: scale(1.1);
@@ -769,4 +810,128 @@ main .song-box .popular-artist .popular-artist-main li .name{
     white-space: nowrap;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width:1120px){
+    main{
+        width: 100%;
+        height: 100%;
+    }    
+    main .music-controller .bar{
+        width:25vw;
+    }
+    main .music-controller .vol{
+        width: 70px;
+    }
+    main .music-controller .volume{
+        margin-left:20px ;
+    }
+    main .music-controller .slider{
+        position: relative;
+        left:10px;
+        /* border: 1pc solid red; */
+    }
+    main .song-box nav .search{
+        position: relative;
+        left: 25px;
+     
+    }
+    main .song-box::before{
+        content: '';
+        position: absolute;
+        background-image: url(bg.png);
+        left:10%;
+        width:85%;
+        background-size: cover;
+    }
+    main .menu-box {
+        z-index: 999;
+    }
+    main .song-box nav .search{
+        position: relative;
+        margin-right: 35px;
+    }
+    
+}
+
+@media only screen and (max-width:950px){
+    main .menu-box .menu-song li .fa-solid{
+        position: relative;
+        left:-62%;
+        opacity: 0;
+        margin-left:30px;
+        margin-inline-start: -60px;
+    }
+    main .menu-box .menu-song li:hover .fa-solid{
+        opacity: 1;
+    }
+    main .menu-box .menu-song li{
+        width: 170px;
+        /* overflow:hidden; */
+    }
+    main .menu-box .menu-song li:hover{
+        background-color:var(--theme1-color);
+    }
+    main  .music-controller img{
+        width:35px;
+        height: 35px;
+    }
+    main  .music-controller h5{
+        font-size: 11px;
+        /* border: .5px solid red; */
+        overflow: auto;
+        /* width: px; */
+        margin-right:-30px;
+    }
+    main  .music-controller h5::-webkit-scrollbar{
+        display: none;
+    }
+    main  .music-controller h5 .subtitle{
+        font-size:9px;
+    }
+    main  .music-controller .icon{
+        position: relative;
+        left:-40px;
+        font-size: 20px;
+        /* border: .5px solid red; */
+        margin-left:-10px;
+        padding-left:30px;
+
+    }
+    main  .music-controller .volume{
+        margin-left:-10px
+    }
+
+    main .song-box::before{
+        content: '';
+        position: absolute;
+        background-image: url(bg.png);
+        left:10%;
+        width:100%;
+        background-size: cover;
+    }
+    main .menu-box {
+        z-index: 999;
+    }
+    main .song-box nav .search{
+        position: relative;
+        margin-right: 35px;
+    }
+
+
+
+}
+
+@media only screen and (max-width:1265px){
+    main{
+        width: 100%;
+        height: 100%;
+    }   
+    main  .music-controller .icon{
+        position: relative;
+        left:10px;
+        font-size: 20px;
+        /* border: .5px solid red; */
+    } 
+
 }

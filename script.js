@@ -237,9 +237,6 @@ vol1.addEventListener('change',()=>{
 
     music.volume=vol_a / 100;
 })
- 
-
-
 
 
 
