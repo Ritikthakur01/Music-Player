@@ -855,6 +855,10 @@ main .song-box .popular-artist .popular-artist-main li .name{
 }
 
 @media only screen and (max-width:950px){
+    main .song-box nav .user{
+        display:none
+    }
+
     main .menu-box .menu-song li .fa-solid{
         position: relative;
         left:-62%;
