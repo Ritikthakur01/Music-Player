@@ -705,7 +705,7 @@ main .song-box .popular-artist{
     width: 90%;
     margin:auto;
     height:auto;
-    margin-top: 15px;
+    margin-top: -5px;
     overflow:auto;
 }
 main .song-box .popular-artist .popular-artist-heading{
@@ -938,5 +938,11 @@ main .song-box .popular-artist .popular-artist-main li .name{
         font-size: 20px;
         /* border: .5px solid red; */
     } 
+    main .song-box .popular-artist .popular-artist-heading .fa-sort-up{
+        top:67%;
+    }
+    main .song-box .popular-artist .popular-artist-heading .fa-sort-down{
+        top:67%
+    }
    
 }
