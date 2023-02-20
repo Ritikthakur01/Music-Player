@@ -161,7 +161,7 @@ Array.from(document.getElementsByClassName('playlist-play')).forEach((e)=>
 
 
         makeAllBackground();
-        Array.from(document.getElementsByClassName('song-item'))[index-1].style.background = "rgba(105,105,105,.1)"
+        Array.from(document.getElementsByClassName('song-item'))[index-1].style.background = "#0b1320;"
 
         makeAllplay();
         el.target.classList.remove("fa-circle-play");
