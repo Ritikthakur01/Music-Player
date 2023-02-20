@@ -540,6 +540,7 @@ main .song-box nav .user{
     top:2px;
     right:8px;
     cursor: pointer;
+    margin-left: 50px;
 }
 main .song-box nav .user img{
     width: 100%;
